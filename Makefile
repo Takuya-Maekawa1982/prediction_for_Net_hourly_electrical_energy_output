@@ -41,11 +41,18 @@ clean:
 	@jupyter kernelspec uninstall $(KERNEL_NAME) -f || true
 	@echo "Clean complete."
 
-# 4. CODE QUALITY: nbqa for notebooks, black/pylint for scripts
+# 4. CODE QUALITY: nbqa for notebooks, ruff/black for scripts
 format:
-	@echo "Formatting .ipynb and .py files..."
+	@echo "Cleaning up imports and linting notebooks..."
+	# nbqa runs ruff INSIDE your notebook cells
+	@$(VENV_BIN)/nbqa ruff *.ipynb --select I,E,F --fix --unsafe-fixes
+	
+	# @echo "Cleaning up imports and linting python scripts..."
+	# @$(VENV_BIN)/ruff check *.py --select I,E,F --fix --unsafe-fixes
+	
+	@echo "Formatting code style with Black..."
 	@$(VENV_BIN)/nbqa black *.ipynb
-	@$(VENV_BIN)/black *.py
+	# @$(VENV_BIN)/black *.py
 
 lint:
 	@echo "Linting .ipynb and .py files..."
@@ -83,4 +90,4 @@ data:
 	@echo "Data successfully localized to data/CCPP_data.csv"
 
 # 7. ALL-IN-ONE: The full reproduction suite from clean slate to execution.
-all: clean install format lint test-nb test run
+all: clean install

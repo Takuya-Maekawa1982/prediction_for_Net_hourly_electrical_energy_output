@@ -1,20 +1,23 @@
 # Core Data Science
-numpy==1.26.4
+numpy==1.24.3
 pandas
 matplotlib
 seaborn
 scikit-learn
 
 # AutoML & Modeling
-pycaret
+pycaret[analysis]
 
-# Jupyter Engine (For VS Code "Top Right" and Makefile Execution)
+# Jupyter Engine
 ipykernel
 notebook
 nbconvert
 
-# Code Quality (Used in your Makefile)
+# Code Quality
 nbqa
 black
 pylint
 pytest
+optuna
+optuna-integration
+ruff
