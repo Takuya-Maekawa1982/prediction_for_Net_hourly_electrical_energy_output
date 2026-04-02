@@ -4,7 +4,7 @@ This repository contains the final project for the Coursera course **"Machine Le
 
 ## 📺 Project Demo
 You can view the full 5-minute technical presentation and notebook walk-through here:
-[**Download/Watch Demo Video**](https://github.com/Takuya-Maekawa1982/prediction_for_Net_hourly_electrical_energy_output/blob/main/Final%20Project%20Predictiong%20Ccpp%20Enrgy%20Output.mp4)
+[**Download/Watch Demo Video**](https://github.com/Takuya-Maekawa1982/prediction_for_Net_hourly_electrical_energy_output/blob/main/Coursera_Final_Project_Predictiong%20CCPP_Enrgy_Output.mp4)
 
 ---
 
